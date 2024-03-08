@@ -72,6 +72,7 @@ terraform import module.repositories.module.<module-repository-name>.github_bran
 - [What is Terraform cloud](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-sign-up)
 - [VCS-driven workflow for Terraform Cloud](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-vcs-change)
 - [Configuring GitHub.com Access (OAuth)](https://developer.hashicorp.com/terraform/cloud-docs/vcs/github)
+- [GitHub Version Control (VCS) Workspace in Terraform Cloud - Tutorial](https://youtu.be/75Y0B7vsBPg?feature=shared)
 
 ## ©️ License
 
