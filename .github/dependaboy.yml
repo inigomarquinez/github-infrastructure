@@ -1,0 +1,10 @@
+version: 2
+
+updates:
+  - package-ecosystem: 'terraform'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'sunday'
+      time: '23:00'
+      timezone: 'Europe/Madrid'
