@@ -7,4 +7,7 @@ provider "github" {
 
 module "repositories" {
   source = "./repositories"
+
+  github_token       = var.github_token
+  github_token_owner = var.github_token_owner
 }
