@@ -7,7 +7,7 @@ variable "github_token" {
   type        = string
 }
 
-variable "github_token_owner" {
-  description = "Github token owner"
-  type        = string
-}
+# variable "github_token_owner" {
+#   description = "Github token owner"
+#   type        = string
+# }
