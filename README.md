@@ -70,6 +70,8 @@ terraform import module.repositories.module.<module-repository-name>.github_bran
 - [How to manage your GitHub Organization with Terraform](https://blog.terramate.io/how-to-manage-your-github-organization-with-terraform-1b584b2ea177)
 - [Terraform GitHub Provider](https://registry.terraform.io/providers/integrations/github/latest/docs)
 - [What is Terraform cloud](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-sign-up)
+- [VCS-driven workflow for Terraform Cloud](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-vcs-change)
+
 
 ## ©️ License
 
