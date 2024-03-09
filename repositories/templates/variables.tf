@@ -87,62 +87,62 @@ variable "github_repository" {
   description = "input values for github_repository resource"
 
   type = object({
-    name                                    = optional(string),
-    description                             = optional(string),
-    homepage_url                            = optional(string),
-    visibility                              = optional(string),
-    has_issues                              = optional(bool),
-    has_discussions                         = optional(bool),
-    has_projects                            = optional(bool),
-    has_wiki                                = optional(bool),
-    is_template                             = optional(bool),
-    allow_merge_commit                      = optional(bool),
-    allow_squash_merge                      = optional(bool),
-    allow_rebase_merge                      = optional(bool),
-    allow_auto_merge                        = optional(bool),
-    squash_merge_commit_title               = optional(string),
-    squash_merge_commit_message             = optional(string),
-    merge_commit_title                      = optional(string),
-    merge_commit_message                    = optional(string),
-    delete_branch_on_merge                  = optional(bool),
-    web_commit_signoff_required             = optional(bool),
-    has_downloads                           = optional(bool),
-    auto_init                               = optional(bool),
-    gitignore_template                      = optional(string),
-    license_template                        = optional(string),
-    archived                                = optional(bool),
-    archive_on_destroy                      = optional(bool),
-    topics                                  = optional(list(string)),
-    vulnerability_alerts                    = optional(bool),
-    ignore_vulnerability_alerts_during_read = optional(bool),
-    allow_update_branch                     = optional(bool),
+    name                                    = string,
+    description                             = string,
+    homepage_url                            = string,
+    visibility                              = string,
+    has_issues                              = bool,
+    has_discussions                         = bool,
+    has_projects                            = bool,
+    has_wiki                                = bool,
+    is_template                             = bool,
+    allow_merge_commit                      = bool,
+    allow_squash_merge                      = bool,
+    allow_rebase_merge                      = bool,
+    allow_auto_merge                        = bool,
+    squash_merge_commit_title               = string,
+    squash_merge_commit_message             = string,
+    merge_commit_title                      = string,
+    merge_commit_message                    = string,
+    delete_branch_on_merge                  = bool,
+    web_commit_signoff_required             = bool,
+    has_downloads                           = bool,
+    auto_init                               = bool,
+    gitignore_template                      = string,
+    license_template                        = string,
+    archived                                = bool,
+    archive_on_destroy                      = bool,
+    topics                                  = list(string),
+    vulnerability_alerts                    = bool,
+    ignore_vulnerability_alerts_during_read = bool,
+    allow_update_branch                     = bool,
 
-    pages = optional(object({
-      source = optional(object({
+    pages = object({
+      source = object({
         branch = string,
-        path   = optional(string)
-      })),
-      build_type = optional(string),
-      cname = optional(string)
-    })),
+        path   = string
+      }),
+      build_type = string,
+      cname = string
+    }),
 
-    security_and_analysis = optional(object({
-      advanced_security = optional(object({
+    security_and_analysis = object({
+      advanced_security = object({
         status = string
-      })),
-      secret_scanning = optional(object({
+      }),
+      secret_scanning = object({
         status = string
-      })),
-      secret_scanning_push_protection = optional(object({
+      }),
+      secret_scanning_push_protection = object({
         status = string
-      }))
-    })),
+      })
+    }),
 
-    template = optional(object({
+    template = object({
       owner      = string
       repository = string,
       include_all_branches = bool
-    }))
+    })
   })
 
   default = {
