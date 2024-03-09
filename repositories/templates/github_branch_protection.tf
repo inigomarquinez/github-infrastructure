@@ -46,12 +46,13 @@ resource "github_branch_protection" "branch_protection" {
     }
   }
 
-  dynamic "restrict_pushes" {
-    for_each = local.github_branch_protection.restrict_pushes == null ? [] : [1]
+  # Only organization repositories can have users and team restrictions
+  # dynamic "restrict_pushes" {
+  #   for_each = local.github_branch_protection.restrict_pushes == null ? [] : [1]
 
-    content {
-      blocks_creations = local.github_branch_protection.restrict_pushes.blocks_creations
-      push_allowances  = local.github_branch_protection.restrict_pushes.push_allowances
-    }
-  }
+  #   content {
+  #     blocks_creations = local.github_branch_protection.restrict_pushes.blocks_creations
+  #     push_allowances  = local.github_branch_protection.restrict_pushes.push_allowances
+  #   }
+  # }
 }

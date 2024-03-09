@@ -41,11 +41,6 @@ variable "github_branch_protection" {
       require_code_owner_reviews      = optional(bool, true),
       required_approving_review_count = optional(number, 0),
       require_last_push_approval      = optional(bool, true)
-    }), {}),
-
-    restrict_pushes = optional(object({
-      blocks_creations = optional(bool, true),
-      push_allowances  = optional(list(string), [])
     }), {})
   })
 
