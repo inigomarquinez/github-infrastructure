@@ -9,10 +9,7 @@ locals {
 }
 
 resource "github_branch_protection" "branch_protection" {
-  depends_on                      = [
-    github_repository.repository,
-    # github_branch_default.branch_default
-  ]
+  depends_on                      = [github_repository.repository]
 
   repository_id                   = github_repository.repository.name
 

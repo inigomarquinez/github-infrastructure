@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-# Authenticate with GitHub API usingPersonal Access Token.
+# Authenticate with GitHub API using Personal Access Token.
 # 🔗 https://registry.terraform.io/providers/integrations/github/latest/docs#oauth--personal-access-token
 # -----------------------------------------------------------------------------
 

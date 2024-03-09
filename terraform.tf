@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-# Configure the Terraform Cloud backend.
+# Configuration of the Terraform Cloud backend.
 # -----------------------------------------------------------------------------
 
 terraform {
