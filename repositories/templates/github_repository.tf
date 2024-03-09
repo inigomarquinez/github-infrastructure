@@ -56,12 +56,20 @@ resource "github_repository" "repository" {
     for_each = local.github_repository.security_and_analysis == null ? [] : [1]
 
     content {
-      advanced_security {
-        status = local.github_repository.security_and_analysis.advanced_security.status
+      # If a repository's visibility is public, advanced_security is always
+      # enabled and cannot be changed, so this setting cannot be supplied.
+      dynamic "advanced_security" {
+        for_each = local.github_repository.visibility == "public" ? [] : [1]
+
+        content {
+          status = local.github_repository.security_and_analysis.advanced_security.status
+        }
       }
+
       secret_scanning {
         status = local.github_repository.security_and_analysis.secret_scanning.status
       }
+
       secret_scanning_push_protection {
         status = local.github_repository.security_and_analysis.secret_scanning_push_protection.status
       }
