@@ -89,7 +89,7 @@ variable "github_repository" {
   type = object({
     name                                    = string,
     description                             = string,
-    homepage_url                            = string,
+    homepage_url                            = optional(string),
     visibility                              = string,
     has_issues                              = bool,
     has_discussions                         = bool,
@@ -102,8 +102,8 @@ variable "github_repository" {
     allow_auto_merge                        = bool,
     squash_merge_commit_title               = string,
     squash_merge_commit_message             = string,
-    merge_commit_title                      = string,
-    merge_commit_message                    = string,
+    merge_commit_title                      = optional(string),
+    merge_commit_message                    = optional(string),
     delete_branch_on_merge                  = bool,
     web_commit_signoff_required             = bool,
     has_downloads                           = bool,
@@ -112,7 +112,7 @@ variable "github_repository" {
     license_template                        = string,
     archived                                = bool,
     archive_on_destroy                      = bool,
-    topics                                  = list(string),
+    topics                                  = optional(list(string)),
     vulnerability_alerts                    = bool,
     ignore_vulnerability_alerts_during_read = bool,
     allow_update_branch                     = bool,
@@ -164,10 +164,12 @@ variable "github_repository" {
     auto_init                               = true,
     gitignore_template                      = "Node",
     license_template                        = "mit",
+    archived                                = false,
     archive_on_destroy                      = true,
     vulnerability_alerts                    = true,
     ignore_vulnerability_alerts_during_read = true,
     allow_update_branch                     = true,
+    pages                                   = null,
 
     security_and_analysis = {
       advanced_security = {
@@ -179,6 +181,8 @@ variable "github_repository" {
       secret_scanning_push_protection = {
         status = "enabled"
       }
-    }
+    },
+
+    template                                = null
   }
 }
