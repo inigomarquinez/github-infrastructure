@@ -98,7 +98,9 @@ variable "github_repository" {
     security_and_analysis = optional(object({
       advanced_security = optional(object({
         status = string,
-      }), null), // Advanced security is always available for public repositories
+      }), {
+        status = "enabled"
+      }),
       secret_scanning = optional(object({
         status = string
       }), {
