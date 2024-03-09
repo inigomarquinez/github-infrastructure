@@ -77,4 +77,13 @@ resource "github_repository" "repository" {
       include_all_branches = local.github_repository.template.include_all_branches
     }
   }
+
+  lifecycle {
+    ignore_changes = [
+      auto_init,
+      license_template,
+      gitignore_template,
+      template,
+    ]
+  }
 }
