@@ -14,9 +14,6 @@ terraform {
     }
   }
 
-  # When using the VCS-driven workflow for Terraform Cloud,
-  # you do not need to define the cloud block in your configuration.
-  # 🔗 https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-vcs-change
   cloud {
     organization = "inigomarquinez"
 

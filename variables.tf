@@ -3,11 +3,6 @@
 # -----------------------------------------------------------------------------
 
 variable "github_token" {
-  description = "Github token"
+  description = "Github token used to authenticate with the GitHub provider."
   type        = string
 }
-
-# variable "github_token_owner" {
-#   description = "Github token owner"
-#   type        = string
-# }
