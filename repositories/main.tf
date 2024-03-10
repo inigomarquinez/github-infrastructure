@@ -20,6 +20,18 @@ module "repository_slides" {
     name                = "slides",
     description         = "🎞️ Slides of all my presentations made with revealjs",
     topics              = ["slides", "revealjs", "inigomarquinez"],
-    archive_on_destroy  = false
+    archive_on_destroy  = false,
+
+    pages = {
+      source = {
+        branch = "gh-pages",
+        path   = "/"
+      },
+      build_type = "legacy",
+    }
+  }
+
+  github_branch_protection = {
+    pattern = "gh-pages"
   }
 }
