@@ -13,13 +13,13 @@
 #   }
 # }
 
-# module "repository_slides" {
-#   source = "./templates"
+module "repository_slides" {
+  source = "./templates"
 
-#   github_repository = {
-#     name                = "slides",
-#     description         = "🎞️ Slides of all my presentations made with revealjs",
-#     topics              = ["slides", "revealjs", "inigomarquinez"],
-#     archive_on_destroy  = false
-#   }
-# }
+  github_repository = {
+    name                = "slides",
+    description         = "🎞️ Slides of all my presentations made with revealjs",
+    topics              = ["slides", "revealjs", "inigomarquinez"],
+    archive_on_destroy  = false
+  }
+}
