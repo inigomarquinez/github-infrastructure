@@ -12,3 +12,13 @@ module "repository_test-repo" {
     archive_on_destroy  = false
   }
 }
+
+module "repository_slides" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "slides",
+    description         = "🎞️ Slides of all my presentations made with revealjs",
+    topics              = ["slides", "revealjs", "inigomarquinez"],
+  }
+}
