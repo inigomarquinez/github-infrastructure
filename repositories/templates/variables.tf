@@ -82,12 +82,12 @@ variable "github_repository" {
     allow_update_branch                     = optional(bool, true),
 
     pages = optional(object({
-      source = object({
+      source = optional(object({
         branch = string,
-        path   = string
-      }),
-      build_type = string,
-      cname      = string
+        path   = optional(string)
+      })),
+      build_type = optional(string),
+      cname      = optional(string)
     }), null),
 
     security_and_analysis = optional(object({
