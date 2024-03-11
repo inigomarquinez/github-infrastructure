@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 # ℹ️ This resource allows you to create and manage repositories within your
 #    GitHub organization or personal account.
-# 🔗 https://registry.terraform.io/provgit checkoiders/integrations/github/latest/docs/resources/repository
+# 🔗 https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 # -----------------------------------------------------------------------------
 
 locals {
