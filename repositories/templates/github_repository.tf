@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 # ℹ️ This resource allows you to create and manage repositories within your
 #    GitHub organization or personal account.
-# 🔗 https://registry.terraform.io/provgit checkoiders/integrations/github/latest/docs/resources/repository
+# 🔗 https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 # -----------------------------------------------------------------------------
 
 locals {
@@ -43,10 +43,15 @@ resource "github_repository" "repository" {
     for_each = local.github_repository.pages == null ? [] : [1]
 
     content {
-      source {
-        branch = local.github_repository.pages.source.branch
-        path   = local.github_repository.pages.source.path
+      dynamic "source" {
+        for_each = local.github_repository.pages.source == null ? [] : [1]
+
+        content {
+          branch = local.github_repository.pages.source.branch
+          path   = local.github_repository.pages.source.path
+        }
       }
+
       build_type = local.github_repository.pages.build_type
       cname      = local.github_repository.pages.cname
     }

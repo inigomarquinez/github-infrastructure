@@ -85,7 +85,7 @@ variable "github_repository" {
       source = optional(object({
         branch = string,
         path   = optional(string)
-      })),
+      }), null),
       build_type = optional(string),
       cname      = optional(string)
     }), null),
