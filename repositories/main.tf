@@ -2,28 +2,42 @@
 # Manage GitHub REPOSITORIES.
 # -----------------------------------------------------------------------------
 
-# module "repository_test-repo" {
-#   source = "./templates"
+#  Alphabetically ordered
 
-#   github_repository = {
-#     name                = "test-repo",
-#     description         = "This is a test repository",
-#     topics              = ["terraform", "github", "test"],
-#     archive_on_destroy  = false
-#   }
-# }
-
-module "repository_slides" {
+module "repository_base-configs" {
   source = "./templates"
 
   github_repository = {
-    name                = "slides",
-    description         = "🎞️ Slides of all my presentations made with revealjs",
-    topics              = ["slides", "revealjs", "inigomarquinez"],
+    name                = "base-configs",
+    description         = "🪄 A collection of opinionated base configs for code quality and linting tools",
+    topics              = [
+      "inigomarquinez",
+      "npm-package-json-lint",
+      "prettier",
+      "shareable-configs"
+    ],
 
-    pages = {
-      build_type = "workflow"
-    }
+    # This repository was imported to the Terraform state.
+    # import = {
+    #   repository = "base-configs"
+    # }
+  }
+}
+
+module "repository_hygen-base-configs" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "hygen-base-configs",
+    description         = "🪄 A hygen package to generate your own set of shared configurations",
+    topics              = [
+      "cli",
+      "generator",
+      "hygen",
+      "inigomarquinez",
+      "shareable-configs",
+      "tools"
+    ]
   }
 }
 
@@ -33,20 +47,46 @@ module "repository_security" {
   github_repository = {
     name                = "security",
     description         = "🔐 Repositories security and analysis",
-    topics              = ["security", "analysis", "maintenance", "scorecard", "openssf-scorecard", "inigomarquinez"]
+    topics              = [
+      "analysis",
+      "inigomarquinez",
+      "maintenance",
+      "openssf-scorecard",
+      "scorecard",
+      "security"
+    ]
   }
 }
 
-module "repository_base-configs" {
+module "repository_slides" {
   source = "./templates"
 
   github_repository = {
-    name                = "base-configs",
-    description         = "🪄 A collection of opinionated base configs for code quality and linting tools",
-    topics              = ["shareable-configs", "npm-package-json-lint", "prettier", "inigomarquinez"],
+    name                = "slides",
+    description         = "🎞️ Slides of all my presentations made with revealjs",
+    topics              = [
+      "inigomarquinez",
+      "revealjs",
+      "slides"
+    ],
 
-    import = {
-      repository = "base-configs"
+    pages = {
+      build_type = "workflow"
     }
   }
 }
+
+# Example to import an existing repository to the Terraform state.
+# module "repository_existing-repo" {
+#   source = "./templates"
+
+#   github_repository = {
+#     name                = "existing-repo",
+#     description         = "Description of the existing repository",
+#     topics              = [],
+
+#     import = {
+#       repository = "existing-repo"
+#     }
+#   }
+# }
