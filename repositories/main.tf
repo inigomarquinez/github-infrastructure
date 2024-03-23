@@ -36,3 +36,17 @@ module "repository_security" {
     topics              = ["security", "analysis", "maintenance", "scorecard", "openssf-scorecard", "inigomarquinez"]
   }
 }
+
+module "repository_base-configs" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "base-configs",
+    description         = "🪄 A collection of opinionated base configs for code quality and linting tools",
+    topics              = ["shareable-configs", "npm-package-json-lint", "prettier", "inigomarquinez"],
+
+    import = {
+      repository = "base-configs"
+    }
+  }
+}
