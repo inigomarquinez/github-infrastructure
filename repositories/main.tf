@@ -22,7 +22,17 @@ module "repository_slides" {
     topics              = ["slides", "revealjs", "inigomarquinez"],
 
     pages = {
-      build_type = "workflow",
+      build_type = "workflow"
     }
+  }
+}
+
+module "repository_security" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "security",
+    description         = "🔐 Repositories security and analysis",
+    topics              = ["security", "analysis", "maintenance", "scorecard", "openssf-scorecard", "inigomarquinez"]
   }
 }
