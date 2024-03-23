@@ -1,25 +1,10 @@
-# 🔗 https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_default#argument-reference
-# variable "github_branch_default" {
-#   description = "input values for github_branch_default resource"
-
-#   type = object({
-#     branch = string,
-#     rename = optional(bool)
-#   })
-
-#   default = {
-#     branch = "main"
-#     rename = false
-#   }
-# }
-
 # 🔗 https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection#argument-reference
 variable "github_branch_protection" {
   description = "input values for github_branch_protection resource"
 
   type = object({
     pattern                         = optional(string, "main"),
-    enforce_admins                  = optional(bool, true),
+    enforce_admins                  = optional(bool, false),
     require_signed_commits          = optional(bool, true),
     required_linear_history         = optional(bool, true),
     require_conversation_resolution = optional(bool, true),
