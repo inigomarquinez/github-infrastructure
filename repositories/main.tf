@@ -84,9 +84,9 @@ module "repository_slides" {
       "slides"
     ],
 
-    pages = {
-      build_type = "workflow"
-    }
+    # pages = {
+    #   build_type = "workflow"
+    # }
   }
 }
 
