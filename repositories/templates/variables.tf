@@ -71,8 +71,8 @@ variable "github_repository" {
         branch = string,
         path   = optional(string)
       }), null),
-      build_type = optional(string),
-      cname      = optional(string)
+      build_type = optional(string, null),
+      cname      = optional(string, null)
     }), null),
 
     security_and_analysis = optional(object({
