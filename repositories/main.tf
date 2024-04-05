@@ -12,7 +12,8 @@ module "repository_awesome-web-resources" {
     description         = "🕶️ Web resources that I have found and that I would like to try in real projects",
     topics              = [
       "awesome",
-      "web resources"
+      "web",
+      "resources"
     ]
   }
 }
