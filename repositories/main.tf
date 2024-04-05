@@ -4,6 +4,20 @@
 
 #  Alphabetically ordered
 
+module "repository_awesome-web-resources" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "awesome-web-resources",
+    description         = "🕶️ Web resources that I have found and that I would like to try in real projects",
+    topics              = [
+      "awesome",
+      "web",
+      "resources"
+    ]
+  }
+}
+
 module "repository_base-configs" {
   source = "./templates"
 
