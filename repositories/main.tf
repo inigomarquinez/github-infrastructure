@@ -42,7 +42,7 @@ module "repository_cognito-custom-email-sender" {
   source = "./templates"
 
   github_repository = {
-    name                = "cognito-custom-email-sender",
+    name                = "howto-cognito-custom-email-sender",
     description         = "📧 POC to configure a custom email sender for Amazon Cognito",
     topics              = [
       "amazon-cognito",
