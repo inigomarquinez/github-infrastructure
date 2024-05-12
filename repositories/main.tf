@@ -38,6 +38,23 @@ module "repository_base-configs" {
   }
 }
 
+module "repository_cognito-custom-email-sender" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "howto-cognito-custom-email-sender",
+    description         = "📧 POC to configure a custom email sender for Amazon Cognito",
+    topics              = [
+      "amazon-cognito",
+      "aws",
+      "cognito",
+      "custom-email-sender",
+      "email",
+      "poc"
+    ]
+  }
+}
+
 module "repository_hygen-base-configs" {
   source = "./templates"
 
