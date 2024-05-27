@@ -116,7 +116,7 @@ module "repository_github" {
     description         = "Default community health files and configurations for my projects",
     topics              = [
       "configuration",
-      "health_files",
+      "health-files",
       "inigomarquinez"
     ],
 
