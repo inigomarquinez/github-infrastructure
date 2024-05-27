@@ -1,8 +1,21 @@
-# -----------------------------------------------------------------------------
+################################################################################
 # Manage GitHub REPOSITORIES.
-# -----------------------------------------------------------------------------
+# (alphabetically ordered)
+################################################################################
 
-#  Alphabetically ordered
+module "repository_github" {
+  source = "./templates"
+
+  github_repository = {
+    name                = ".github",
+    description         = "Default community health files and configurations for my projects",
+    topics              = [
+      "configuration",
+      "health-files",
+      "inigomarquinez"
+    ],
+  }
+}
 
 module "repository_awesome-web-resources" {
   source = "./templates"
@@ -103,24 +116,6 @@ module "repository_slides" {
 
     pages = {
       build_type = "workflow"
-    }
-  }
-}
-
-module "repository_github" {
-  source = "./templates"
-
-  github_repository = {
-    name                = ".github",
-    description         = "Default community health files and configurations for my projects",
-    topics              = [
-      "configuration",
-      "health-files",
-      "inigomarquinez"
-    ],
-
-    import = {
-      repository = ".github"
     }
   }
 }

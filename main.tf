@@ -7,11 +7,6 @@
 #   id = "existing-repo"
 # }
 
-import {
-  to = module.repositories.module.repository_github.github_repository.repository
-  id = ".github"
-}
-
 module "repositories" {
   source = "./repositories"
 }
