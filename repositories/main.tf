@@ -108,6 +108,23 @@ module "repository_slides" {
 }
 
 # Example to import an existing repository to the Terraform state.
+module "repository_github" {
+  source = "./templates"
+
+  github_repository = {
+    name                = ".github",
+    description         = "Default community health files and configurations for my projects",
+    topics              = [
+      "configuration",
+      "health-files",
+      "inigomarquinez"
+    ],
+
+    import = {
+      repository = ".github"
+    }
+  }
+}
 # module "repository_existing-repo" {
 #   source = "./templates"
 
