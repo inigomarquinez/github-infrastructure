@@ -107,7 +107,6 @@ module "repository_slides" {
   }
 }
 
-# Example to import an existing repository to the Terraform state.
 module "repository_github" {
   source = "./templates"
 
@@ -125,6 +124,11 @@ module "repository_github" {
     }
   }
 }
+
+################################################################################
+# Example to import an existing repository to the Terraform state.
+# Take a look at `main.tf` file too.
+################################################################################
 # module "repository_existing-repo" {
 #   source = "./templates"
 
