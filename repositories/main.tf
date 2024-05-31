@@ -125,10 +125,12 @@ module "repository_learning-astro" {
 
   github_repository = {
     name                = "learning-astro",
-    description         = "📚 Learning Astro",
+    description         = "📚 Udemy: Desarrollo web ultra rápido con Astro",
+    homepage_url        = "https://www.udemy.com/course/desarrollo-web-ultra-rapido-con-astro/",
     topics              = [
       "astro",
-      "learning"
+      "learning",
+      "udemy"
     ]
   }
 }
