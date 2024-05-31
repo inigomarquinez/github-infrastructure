@@ -120,6 +120,19 @@ module "repository_slides" {
   }
 }
 
+module "repository_learning-astro" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "learning-astro",
+    description         = "📚 Learning Astro",
+    topics              = [
+      "astro",
+      "learning"
+    ]
+  }
+}
+
 ################################################################################
 # Example to import an existing repository to the Terraform state.
 # Take a look at `main.tf` file too.
