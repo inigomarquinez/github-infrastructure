@@ -120,6 +120,10 @@ module "repository_slides" {
   }
 }
 
+#-------------------------------------------------------------------------------
+# Learning repositories
+#-------------------------------------------------------------------------------
+
 module "repository_learning-astro" {
   source = "./templates"
 
@@ -131,6 +135,25 @@ module "repository_learning-astro" {
       "astro",
       "learning",
       "udemy"
+    ]
+  }
+}
+
+#-------------------------------------------------------------------------------
+# POC repositories
+#-------------------------------------------------------------------------------
+
+module "repository_poc-tailwind-elements" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "poc-tailwind-elements",
+    description         = "🧪 POC to test Tailwind Elements library in a Next.js project",
+    topics              = [
+      "nextjs",
+      "poc",
+      "tailwind",
+      "tailwind-elements"
     ]
   }
 }
