@@ -143,6 +143,21 @@ module "repository_learning-astro" {
 # POC repositories
 #-------------------------------------------------------------------------------
 
+module "repository_poc-shadcn-ui" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "poc-shadcn-ui",
+    description         = "🧪 POC to test shadcn/ui in a Next.js project",
+    topics              = [
+      "nextjs",
+      "poc",
+      "shadcn-ui",
+      "tailwind"
+    ]
+  }
+}
+
 module "repository_poc-tailwind-elements" {
   source = "./templates"
 
