@@ -130,7 +130,7 @@ module "repository_learning-astro" {
   github_repository = {
     name         = "learning-astro",
     description  = "📚 Udemy: Desarrollo web ultra rápido con Astro",
-    homepage_url = "https://www.udemy.com/course/desarrollo-web-ultra-rapido-con-astro/",
+    homepage_url = "https://inigomarquinez.github.io/learning-astro/",
     topics = [
       "astro",
       "learning",
