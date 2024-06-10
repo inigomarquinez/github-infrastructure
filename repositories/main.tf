@@ -129,7 +129,7 @@ module "repository_learning-astro" {
 
   github_repository = {
     name         = "learning-astro",
-    description  = "📚 Desarrollo web ultra rápido con Astro",
+    description  = "📚 Desarrollo web ultra rápido con Astro (Udemy)",
     homepage_url = "https://inigomarquinez.github.io/learning-astro/",
     topics = [
       "astro",
@@ -148,7 +148,7 @@ module "repository_learning-langchain" {
 
   github_repository = {
     name         = "learning-langchain",
-    description  = "📚 LangChain: Develop AI web-apps with JavaScript and LangChain",
+    description  = "📚 LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy)",
     topics = [
       "ai",
       "langchain",
