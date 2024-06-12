@@ -183,9 +183,9 @@ module "repository_poc-shadcn-ui" {
     name        = "poc-shadcn-ui"
     description = "🧪 POC to test shadcn/ui in a Next.js project"
     topics = [
-      "nextjs"
-      "poc"
-      "shadcn-ui"
+      "nextjs",
+      "poc",
+      "shadcn-ui",
       "tailwind"
     ]
   }
@@ -198,9 +198,9 @@ module "repository_poc-tailwind-elements" {
     name        = "poc-tailwind-elements"
     description = "🧪 POC to test Tailwind Elements library in a Next.js project"
     topics = [
-      "nextjs"
-      "poc"
-      "tailwind"
+      "nextjs",
+      "poc",
+      "tailwind",
       "tailwind-elements"
     ]
   }
