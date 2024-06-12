@@ -144,7 +144,8 @@ module "repository_slides" {
     ]
 
     pages = {
-      build_type = "workflow"
+      build_type  = "workflow"
+      source      = null
     }
   }
 }
@@ -167,7 +168,8 @@ module "repository_learning-astro" {
     ]
 
     pages = {
-      build_type = "workflow"
+      build_type  = "workflow"
+      source      = null
     }
   }
 }
