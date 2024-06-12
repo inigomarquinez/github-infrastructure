@@ -10,8 +10,8 @@ module "repository_github" {
     name        = ".github"
     description = "Default community health files and configurations for my projects"
     topics = [
-      "configuration"
-      "health-files"
+      "configuration",
+      "health-files",
       "inigomarquinez"
     ]
   }
@@ -24,8 +24,8 @@ module "repository_awesome-web-resources" {
     name        = "awesome-web-resources"
     description = "🕶️ Web resources that I have found and that I would like to try in real projects"
     topics = [
-      "awesome"
-      "web"
+      "awesome",
+      "web",
       "resources"
     ]
   }
@@ -38,9 +38,9 @@ module "repository_base-configs" {
     name        = "base-configs"
     description = "🪄 A collection of opinionated base configs for code quality and linting tools"
     topics = [
-      "inigomarquinez"
-      "npm-package-json-lint"
-      "prettier"
+      "inigomarquinez",
+      "npm-package-json-lint",
+      "prettier",
       "shareable-configs"
     ]
 
@@ -58,11 +58,11 @@ module "repository_cognito-custom-email-sender" {
     name        = "howto-cognito-custom-email-sender"
     description = "📧 POC to configure a custom email sender for Amazon Cognito"
     topics = [
-      "amazon-cognito"
-      "aws"
-      "cognito"
-      "custom-email-sender"
-      "email"
+      "amazon-cognito",
+      "aws",
+      "cognito",
+      "custom-email-sender",
+      "email",
       "poc"
     ]
   }
@@ -75,11 +75,11 @@ module "repository_hygen-base-configs" {
     name        = "hygen-base-configs"
     description = "🪄 A hygen package to generate your own set of shared configurations"
     topics = [
-      "cli"
-      "generator"
-      "hygen"
-      "inigomarquinez"
-      "shareable-configs"
+      "cli",
+      "generator",
+      "hygen",
+      "inigomarquinez",
+      "shareable-configs",
       "tools"
     ]
   }
@@ -92,11 +92,11 @@ module "repository_security" {
     name        = "security"
     description = "🔐 Repositories security and analysis"
     topics = [
-      "analysis"
-      "inigomarquinez"
-      "maintenance"
-      "openssf-scorecard"
-      "scorecard"
+      "analysis",
+      "inigomarquinez",
+      "maintenance",
+      "openssf-scorecard",
+      "scorecard",
       "security"
     ]
   }
@@ -109,8 +109,8 @@ module "repository_slides" {
     name        = "slides"
     description = "🎞️ Slides of all my presentations made with revealjs"
     topics = [
-      "inigomarquinez"
-      "revealjs"
+      "inigomarquinez",
+      "revealjs",
       "slides"
     ]
 
@@ -132,8 +132,8 @@ module "repository_learning-astro" {
     description  = "📚 Desarrollo web ultra rápido con Astro (Udemy)"
     homepage_url = "https://inigomarquinez.github.io/learning-astro/"
     topics = [
-      "astro"
-      "learning"
+      "astro",
+      "learning",
       "udemy"
     ]
 
@@ -150,9 +150,9 @@ module "repository_learning-langchain" {
     name         = "learning-langchain"
     description  = "📚 LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy)"
     topics = [
-      "ai"
-      "langchain"
-      "learning"
+      "ai",
+      "langchain",
+      "learning",
       "udemy"
     ]
   }
