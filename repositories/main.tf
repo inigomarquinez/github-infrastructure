@@ -1,7 +1,10 @@
 ################################################################################
 # Manage GitHub REPOSITORIES.
-# (alphabetically ordered)
 ################################################################################
+
+#-------------------------------------------------------------------------------
+# Special repositories
+#-------------------------------------------------------------------------------
 
 module "repository_github" {
   source = "./templates"
@@ -15,7 +18,33 @@ module "repository_github" {
       "inigomarquinez"
     ]
   }
+
+
+  # This repository was imported to the Terraform state.
+  # import = {
+  #   repository = ".github"
+  # }
 }
+
+module "repository_inigomarquinez-github-io" {
+  source = "./templates"
+
+  github_repository = {
+    name        = "inigomarquinez.github.io"
+    description = "🌐 My personal GitHub website"
+    homepage_url = "https://inigomarquinez.github.io/"
+    topics = [
+      "portfolio",
+      "inigomarquinez"
+    ]
+  }
+
+  # Github pages are automatically enabled for this special repository.
+}
+
+#-------------------------------------------------------------------------------
+# 
+#-------------------------------------------------------------------------------
 
 module "repository_awesome-web-resources" {
   source = "./templates"
@@ -155,20 +184,6 @@ module "repository_learning-langchain" {
       "learning",
       "udemy"
     ]
-  }
-}
-
-
-module "repository_test" {
-  source = "./templates"
-
-  github_repository = {
-    name         = "test"
-    description  = "Test"
-
-    pages = {
-      build_type = "workflow"
-    }
   }
 }
 
