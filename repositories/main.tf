@@ -37,7 +37,7 @@ module "repository_inigomarquinez-github-io" {
       "portfolio",
       "inigomarquinez"
     ]
-    enable_pages = true
+    pages_enable = true
   }
 }
 
@@ -142,7 +142,7 @@ module "repository_slides" {
       "slides"
     ]
 
-    enable_pages = true
+    pages_enable = true
   }
 }
 
@@ -162,7 +162,7 @@ module "repository_learning-astro" {
       "learning",
       "udemy"
     ]
-    enable_pages = true
+    pages_enable = true
   }
 }
 
