@@ -72,14 +72,14 @@ variable "github_repository" {
     pages_cname                             = optional(string, null) # the custom domain of the GitHub Pages
     pages_path                              = optional(string, null) # the path to the GitHub Pages content
 
-    pages = optional(object({
-      source = optional(object({
-        branch = optional(string, null)
-        path   = optional(string, null)
-      }), null)
-      build_type = optional(string, null)
-      cname      = optional(string, null)
-    }), null)
+    # pages = optional(object({
+    #   source = optional(object({
+    #     branch = optional(string, null)
+    #     path   = optional(string, null)
+    #   }), null)
+    #   build_type = optional(string, null)
+    #   cname      = optional(string, null)
+    # }), null)
 
     security_and_analysis = optional(object({
       advanced_security = optional(object({
