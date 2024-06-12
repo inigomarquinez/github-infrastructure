@@ -67,7 +67,7 @@ variable "github_repository" {
     allow_update_branch                     = optional(bool, true)
 
     enable_pages                            = optional(bool, false) # whether to enable GitHub Pages
-    pages_branch                            = optional(string, null) # the branch to use for GitHub Pages
+    pages_branch                            = optional(string, "main") # the branch to use for GitHub Pages
     pages_build_type                        = optional(string, "workflow") # the build type of the GitHub Pages
     pages_cname                             = optional(string, null) # the custom domain of the GitHub Pages
     pages_path                              = optional(string, null) # the path to the GitHub Pages content
