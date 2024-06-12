@@ -66,14 +66,11 @@ variable "github_repository" {
     ignore_vulnerability_alerts_during_read = optional(bool, true)
     allow_update_branch                     = optional(bool, true)
 
-    pages = optional(object({
-      source = optional(object({
-        branch = optional(string, null)
-        path   = optional(string, null)
-      }), null)
-      build_type = optional(string, null)
-      cname      = optional(string, null)
-    }), null)
+    pages_enable                            = optional(bool, false) # whether to enable GitHub Pages
+    pages_branch                            = optional(string, "main") # the branch to use for GitHub Pages
+    pages_build_type                        = optional(string, "workflow") # the build type of the GitHub Pages
+    pages_cname                             = optional(string, null) # the custom domain of the GitHub Pages
+    pages_path                              = optional(string, null) # the path to the GitHub Pages content
 
     security_and_analysis = optional(object({
       advanced_security = optional(object({

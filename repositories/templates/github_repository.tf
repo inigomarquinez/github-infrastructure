@@ -40,20 +40,16 @@ resource "github_repository" "repository" {
   allow_update_branch                     = local.github_repository.allow_update_branch
 
   dynamic "pages" {
-    for_each = local.github_repository.pages == null ? [] : [1]
+    for_each = local.github_repository.pages_enable ? [1] : []
 
     content {
-      dynamic "source" {
-        for_each = local.github_repository.pages.source == null ? [] : [1]
+      build_type = local.github_repository.pages_build_type
+      cname      = local.github_repository.pages_cname
 
-        content {
-          branch = local.github_repository.pages.source.branch
-          path   = local.github_repository.pages.source.path
-        }
+      source {
+        branch = local.github_repository.pages_branch
+        path   = local.github_repository.pages_path
       }
-
-      build_type = local.github_repository.pages.build_type
-      cname      = local.github_repository.pages.cname
     }
   }
 

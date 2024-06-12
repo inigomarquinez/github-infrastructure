@@ -37,9 +37,8 @@ module "repository_inigomarquinez-github-io" {
       "portfolio",
       "inigomarquinez"
     ]
+    pages_enable = true
   }
-
-  # Github pages are automatically enabled for this special repository.
 }
 
 #-------------------------------------------------------------------------------
@@ -143,9 +142,7 @@ module "repository_slides" {
       "slides"
     ]
 
-    pages = {
-      build_type = "workflow"
-    }
+    pages_enable = true
   }
 }
 
@@ -165,10 +162,7 @@ module "repository_learning-astro" {
       "learning",
       "udemy"
     ]
-
-    pages = {
-      build_type = "workflow"
-    }
+    pages_enable = true
   }
 }
 
