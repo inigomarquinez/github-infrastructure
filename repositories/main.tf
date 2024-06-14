@@ -172,10 +172,6 @@ module "repository_challenge-phone-catalog-app" {
       "challenge",
       "guidesmiths"
     ]
-
-    import = {
-      repository = "challenge-phone-catalog-app"
-    }
   }
 }
 
