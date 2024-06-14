@@ -24,9 +24,9 @@ module "repository_inigomarquinez" {
   source = "./templates"
 
   github_repository = {
-    name                = "inigomarquinez"
-    description         = "👤 My GitHub profile."
-    topics              = [
+    name        = "inigomarquinez"
+    description = "👤 My GitHub profile."
+    topics = [
       "inigomarquinez"
     ]
   }
@@ -36,8 +36,8 @@ module "repository_inigomarquinez-github-io" {
   source = "./templates"
 
   github_repository = {
-    name        = "inigomarquinez.github.io"
-    description = "🌐 My personal GitHub website."
+    name         = "inigomarquinez.github.io"
+    description  = "🌐 My personal GitHub website."
     homepage_url = "https://inigomarquinez.github.io/"
     topics = [
       "portfolio",
@@ -55,10 +55,10 @@ module "repository_advent-of-code" {
   source = "./templates"
 
   github_repository = {
-    name                = "advent-of-code"
-    description         = "🧠 My solutions to Advent of Code's annual challenges."
-    homepage_url        = "https://adventofcode.com/"
-    topics              = [
+    name         = "advent-of-code"
+    description  = "🧠 My solutions to Advent of Code's annual challenges."
+    homepage_url = "https://adventofcode.com/"
+    topics = [
       "advent-of-code"
     ]
   }
@@ -162,14 +162,33 @@ module "repository_slides" {
 # 🤼 Challenge repositories
 #-------------------------------------------------------------------------------
 
+module "repository_challenge-phone-catalog-app" {
+  source = "./templates"
+
+  github_repository = {
+    name        = "challenge-phone-catalog-app"
+    description = "A very simple product catalog app."
+    topics = [
+      "challenge",
+      "guidesmiths"
+    ]
+
+    import = {
+      repository = "challenge-phone-catalog-app"
+    }
+  }
+}
+
+
 module "repository_challenge-sinusoidal-wave-form" {
   source = "./templates"
 
   github_repository = {
-    name                = "challenge-sinusoidal-wave-form"
-    description         = "Qt small application that generates a sinusoidal wave form based on several user configurable parameters."
-    topics              = [
-      "challenge"
+    name        = "challenge-sinusoidal-wave-form"
+    description = "Qt small application that generates a sinusoidal wave form based on several user configurable parameters."
+    topics = [
+      "challenge",
+      "innerspec"
     ]
   }
 }
@@ -182,10 +201,10 @@ module "repository_kata-gilded-rose" {
   source = "./templates"
 
   github_repository = {
-    name                = "kata-gilded-rose"
-    description         = "🥋 Gilded Rose Kata."
-    homepage_url        = "https://kata-log.rocks/gilded-rose-kata"
-    topics              = [
+    name         = "kata-gilded-rose"
+    description  = "🥋 Gilded Rose Kata."
+    homepage_url = "https://kata-log.rocks/gilded-rose-kata"
+    topics = [
       "kata"
     ]
   }
@@ -195,10 +214,10 @@ module "repository_kata-look-and-say-sequence" {
   source = "./templates"
 
   github_repository = {
-    name                = "kata-look-and-say-sequence"
-    description         = "🥋 Look and say sequence kata."
-    homepage_url        = "https://en.wikipedia.org/wiki/Look-and-say_sequence"
-    topics              = [
+    name         = "kata-look-and-say-sequence"
+    description  = "🥋 Look and say sequence kata."
+    homepage_url = "https://en.wikipedia.org/wiki/Look-and-say_sequence"
+    topics = [
       "kata"
     ]
   }
@@ -208,10 +227,10 @@ module "repository_kata-ohce" {
   source = "./templates"
 
   github_repository = {
-    name                = "kata-ohce"
-    description         = "🥋 ohce kata."
-    homepage_url        = "https://kata-log.rocks/ohce-kata"
-    topics              = [
+    name         = "kata-ohce"
+    description  = "🥋 ohce kata."
+    homepage_url = "https://kata-log.rocks/ohce-kata"
+    topics = [
       "kata"
     ]
   }
@@ -240,8 +259,8 @@ module "repository_learning-langchain" {
   source = "./templates"
 
   github_repository = {
-    name         = "learning-langchain"
-    description  = "📚 LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy)."
+    name        = "learning-langchain"
+    description = "📚 LangChain: Develop AI web-apps with JavaScript and LangChain (Udemy)."
     topics = [
       "ai",
       "langchain",
