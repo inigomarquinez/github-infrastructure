@@ -3,7 +3,7 @@
 ################################################################################
 
 #-------------------------------------------------------------------------------
-# Special repositories
+# 🦄 Special repositories
 #-------------------------------------------------------------------------------
 
 module "repository_github" {
@@ -18,12 +18,6 @@ module "repository_github" {
       "inigomarquinez"
     ]
   }
-
-
-  # This repository was imported to the Terraform state.
-  # import = {
-  #   repository = ".github"
-  # }
 }
 
 module "repository_inigomarquinez" {
@@ -35,11 +29,6 @@ module "repository_inigomarquinez" {
     topics              = [
       "inigomarquinez"
     ]
-
-    # This repository was imported to the Terraform state.
-    import = {
-      repository = "inigomarquinez"
-    }
   }
 }
 
@@ -104,11 +93,6 @@ module "repository_base-configs" {
       "prettier",
       "shareable-configs"
     ]
-
-    # This repository was imported to the Terraform state.
-    # import = {
-    #   repository = "base-configs"
-    # }
   }
 }
 
@@ -192,11 +176,6 @@ module "repository_challenge-sinusoidal-wave-form" {
     topics              = [
       "challenge"
     ]
-
-    # This repository was imported to the Terraform state.
-    import = {
-      repository = "challenge-sinusoidal-wave-form"
-    }
   }
 }
 
@@ -214,11 +193,6 @@ module "repository_kata-gilded-rose" {
     topics              = [
       "kata"
     ]
-
-    # This repository was imported to the Terraform state.
-    import = {
-      repository = "kata-gilded-rose"
-    }
   }
 }
 
@@ -232,11 +206,6 @@ module "repository_kata-look-and-say-sequence" {
     topics              = [
       "kata"
     ]
-
-    # This repository was imported to the Terraform state.
-    import = {
-      repository = "kata-look-and-say-sequence"
-    }
   }
 }
 
@@ -250,11 +219,6 @@ module "repository_kata-ohce" {
     topics              = [
       "kata"
     ]
-
-    # This repository was imported to the Terraform state.
-    import = {
-      repository = "kata-ohce"
-    }
   }
 }
 #-------------------------------------------------------------------------------
