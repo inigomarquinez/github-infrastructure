@@ -61,11 +61,6 @@ module "repository_advent-of-code" {
     topics              = [
       "advent-of-code"
     ]
-
-    # This repository was imported to the Terraform state.
-    import = {
-      repository = "advent-of-code"
-    }
   }
 }
 
@@ -290,10 +285,10 @@ module "repository_poc-tailwind-elements" {
   }
 }
 
-################################################################################
+#-------------------------------------------------------------------------------
 # Example to import an existing repository to the Terraform state.
 # Take a look at `main.tf` file too.
-################################################################################
+#-------------------------------------------------------------------------------
 # module "repository_existing-repo" {
 #   source = "./templates"
 
