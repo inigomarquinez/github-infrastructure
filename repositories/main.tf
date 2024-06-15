@@ -108,6 +108,23 @@ module "repository_cognito-custom-email-sender" {
   }
 }
 
+module "repository_github-snitch" {
+  source = "./templates"
+
+  github_repository = {
+    name                = "github-snitch"
+    description         = "🕵️ GitHub action that retrieves the basic information of all repos of a github user/organisation."
+    topics              = [
+      "github",
+      "github-action"
+    ]
+
+    import = {
+      repository = "github-snitch"
+    }
+  }
+}
+
 module "repository_hygen-base-configs" {
   source = "./templates"
 
