@@ -11,9 +11,3 @@ module "repositories" {
 #   to = module.repositories.module.repository_existing-repo.github_repository.repository
 #   id = "existing-repo"
 # }
-
-
-import {
-  to = module.repositories.module.repository_github-snitch.github_repository.repository
-  id = "github-snitch"
-}
