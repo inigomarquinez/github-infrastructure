@@ -118,10 +118,6 @@ module "repository_github-snitch" {
       "github",
       "github-action"
     ]
-
-    import = {
-      repository = "github-snitch"
-    }
   }
 }
 
