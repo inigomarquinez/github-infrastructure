@@ -118,6 +118,12 @@ module "repository_github-snitch" {
       "github",
       "github-action"
     ]
+
+    # template = {
+    #   owner                = "github"
+    #   repository           = "javascript-action"
+    #   include_all_branches = false
+    # }
   }
 }
 
