@@ -34,7 +34,7 @@ resource "github_repository" "repository" {
   license_template                        = local.github_repository.license_template
   archived                                = local.github_repository.archived
   archive_on_destroy                      = local.github_repository.archive_on_destroy
-  topics                                  = local.github_repository.topics
+  topics                                  = [local.github_repository.topics, "iac"]
   vulnerability_alerts                    = local.github_repository.vulnerability_alerts
   ignore_vulnerability_alerts_during_read = local.github_repository.ignore_vulnerability_alerts_during_read
   allow_update_branch                     = local.github_repository.allow_update_branch
