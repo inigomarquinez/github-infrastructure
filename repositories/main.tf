@@ -91,6 +91,19 @@ module "repository_base-configs" {
   }
 }
 
+module "repository_base-configs-generator" {
+  source = "./templates"
+
+  github_repository = {
+    name        = "base-configs-generator"
+    description = "🪄 A monorepo scaffolding tool providing a unified setup with opinionated base configurations for code quality and linting tools."
+    topics = [
+      "generator",
+      "shareable-configs"
+    ]
+  }
+}
+
 module "repository_cognito-custom-email-sender" {
   source = "./templates"
 
@@ -124,23 +137,6 @@ module "repository_github-snitch" {
     #   repository           = "javascript-action"
     #   include_all_branches = false
     # }
-  }
-}
-
-module "repository_hygen-base-configs" {
-  source = "./templates"
-
-  github_repository = {
-    name        = "hygen-base-configs"
-    description = "🪄 A hygen package to generate your own set of shared configurations."
-    topics = [
-      "cli",
-      "generator",
-      "hygen",
-      "inigomarquinez",
-      "shareable-configs",
-      "tools"
-    ]
   }
 }
 
