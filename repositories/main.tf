@@ -104,6 +104,19 @@ module "repository_base-configs-generator" {
   }
 }
 
+module "repository_css-playground" {
+  source = "./templates"
+
+  github_repository = {
+    name        = "css-playground"
+    description = "🎨 A collection of pure CSS and HTML examples — no JavaScript needed!"
+    topics = [
+      "css",
+      "playground"
+    ]
+  }
+}
+
 module "repository_cognito-custom-email-sender" {
   source = "./templates"
 
