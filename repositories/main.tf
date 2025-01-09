@@ -64,18 +64,6 @@ module "repository_advent-of-code" {
   }
 }
 
-module "repository_awesome-web-resources" {
-  source = "./templates"
-
-  github_repository = {
-    name        = "awesome-web-resources"
-    description = "🕶️ Web resources that I have found and that I would like to try in real projects."
-    topics = [
-      "awesome"
-    ]
-  }
-}
-
 module "repository_base-configs" {
   source = "./templates"
 
@@ -100,19 +88,6 @@ module "repository_base-configs-generator" {
     topics = [
       "generator",
       "shareable-configs"
-    ]
-  }
-}
-
-module "repository_css-playground" {
-  source = "./templates"
-
-  github_repository = {
-    name        = "css-playground"
-    description = "🎨 A collection of pure CSS and HTML examples — no JavaScript needed!"
-    topics = [
-      "css",
-      "playground"
     ]
   }
 }
