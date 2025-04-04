@@ -29,6 +29,14 @@ module "repository_inigomarquinez" {
     topics = [
       "inigomarquinez"
     ]
+    pages = {
+      build_type  = "workflow"
+      cname       = "inigomarquinezprado.dev"
+      source = {
+        branch  = "main"
+        path    = "/"
+      }
+    }
   }
 }
 
