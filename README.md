@@ -17,18 +17,21 @@
 
 1. Install [Terraform](https://developer.hashicorp.com/terraform/install) to manage the infrastructure as code.
 
-2. [Create a fine-grained personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) to be able to manage your GitHub infrastructure as code, giving it the necessary permissions to manage your repositories, branches, and other resources.
+2. [Create a fine-grained personal access token](https://github.com/settings/tokens/new) to be able to manage your GitHub infrastructure as code, giving it the necessary permissions to manage your repositories, branches, and other resources:
 
-3. To save the infrastructure state, create an account in [Terraform Cloud](https://app.terraform.io/app) and create a new workspace to manage the infrastructure. 
+   - `repo` scope: to manage the repositories.
+   - `write:org` scope: to manage the organization.
+   - `delete:repo` scope: to delete the repositories.
 
-4. Create the `terraform.tfvars` file to save the variables and secrets created in the previous steps, such as the GitHub token. Remember to add the file to the `.gitignore` file to avoid committing it to the repository!
+3. To save the infrastructure state, create an account in [Terraform Cloud](https://app.terraform.io/app) and create a new workspace to manage the infrastructure.
 
-```hcl
-github_token = <your-github-token>
-github_token_owner = <your-github-username>
-terraform_cloud_organization = <your-terraform-cloud-organization>
-terraform_cloud_organization_workspace = <your-terraform-cloud-organization-workspace>
-```
+4. Connect the new workspace to your repository, allowing Terraform Cloud to manage the infrastructure with Version Control System (VCS) integration.
+
+4. Inside Terraform Cloud, go to your workspace and create the following environment variables:
+
+   - `github_token` (sensitive): the GitHub token created in step 2.
+
+4. Now, whenever a Pull Request is created in the repository, Terraform Cloud will automatically run the `terraform plan` command to review the changes that will be applied to the infrastructure. You can then review the changes and apply them by merging the PR.
 
 ### First usage
 

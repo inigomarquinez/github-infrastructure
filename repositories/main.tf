@@ -43,7 +43,11 @@ module "repository_inigomarquinez-github-io" {
       "portfolio",
       "inigomarquinez"
     ]
-    pages_enable = true
+    pages_enable      = true
+    pages_build_type  = "workflow"
+    pages_cname       = "inigomarquinezprado.dev"
+    pages_branch      = "main"
+    pages_path        = "/"
   }
 }
 
@@ -302,6 +306,28 @@ module "repository_poc-tailwind-elements" {
     ]
   }
 }
+
+#-------------------------------------------------------------------------------
+# 🧪 POC repositories
+#-------------------------------------------------------------------------------
+
+module "repository_poc-unlighthouse-integration" {
+  source = "./templates"
+
+  github_repository = {
+    name         = "poc-unlighthouse-integration"
+    description  = "🧪 PoC for integrating the Unlighthouse tool in a CI environment."
+    topics = [
+      "ci",
+      "unlighthouse",
+      "poc",
+      "static-site"
+    ]
+    homepage_url = "https://inigomarquinez.github.io/poc-unlighthouse-integration/"
+    pages_enable = true
+  }
+}
+
 
 #-------------------------------------------------------------------------------
 # Example to import an existing repository to the Terraform state.
