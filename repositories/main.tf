@@ -29,11 +29,6 @@ module "repository_inigomarquinez" {
     topics = [
       "inigomarquinez"
     ]
-    pages_enable      = true
-    pages_build_type  = "workflow"
-    pages_cname       = "inigomarquinezprado.dev"
-    pages_branch      = "main"
-    pages_path        = "/"
   }
 }
 
@@ -48,7 +43,11 @@ module "repository_inigomarquinez-github-io" {
       "portfolio",
       "inigomarquinez"
     ]
-    pages_enable = true
+    pages_enable      = true
+    pages_build_type  = "workflow"
+    pages_cname       = "inigomarquinezprado.dev"
+    pages_branch      = "main"
+    pages_path        = "/"
   }
 }
 
