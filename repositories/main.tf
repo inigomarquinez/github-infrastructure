@@ -311,6 +311,22 @@ module "repository_poc-tailwind-elements" {
 # 🧪 POC repositories
 #-------------------------------------------------------------------------------
 
+module "repository_poc-secheaders-integration" {
+  source = "./templates"
+
+  github_repository = {
+    name         = "poc-secheaders-integration"
+    description  = "🧪 PoC for integrating SecHeaders in a CI environment to analyze and improve HTTP security headers."
+    topics = [
+      "ci",
+      "secheaders",
+      "poc",
+      "security",
+      "http-headers"
+    ]
+  }
+}
+
 module "repository_poc-unlighthouse-integration" {
   source = "./templates"
 
