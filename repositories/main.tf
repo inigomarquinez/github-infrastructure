@@ -277,6 +277,36 @@ module "repository_learning-langchain" {
 # 🧪 POC repositories
 #-------------------------------------------------------------------------------
 
+module "repository_poc-keycloak" {
+  source = "./templates"
+
+  github_repository = {
+    name         = "poc-keycloak"
+    description  = "🧪 POC to test Keycloak as an identity provider in both a frontend and backend services."
+    topics = [
+      "identity-provider",
+      "keycloak",
+      "poc"
+    ]
+  }
+}
+
+module "repository_poc-secheaders-integration" {
+  source = "./templates"
+
+  github_repository = {
+    name         = "poc-secheaders-integration"
+    description  = "🧪 PoC for integrating SecHeaders in a CI environment to analyze and improve HTTP security headers."
+    topics = [
+      "ci",
+      "secheaders",
+      "poc",
+      "security",
+      "http-headers"
+    ]
+  }
+}
+
 module "repository_poc-shadcn-ui" {
   source = "./templates"
 
@@ -303,26 +333,6 @@ module "repository_poc-tailwind-elements" {
       "poc",
       "tailwind",
       "tailwind-elements"
-    ]
-  }
-}
-
-#-------------------------------------------------------------------------------
-# 🧪 POC repositories
-#-------------------------------------------------------------------------------
-
-module "repository_poc-secheaders-integration" {
-  source = "./templates"
-
-  github_repository = {
-    name         = "poc-secheaders-integration"
-    description  = "🧪 PoC for integrating SecHeaders in a CI environment to analyze and improve HTTP security headers."
-    topics = [
-      "ci",
-      "secheaders",
-      "poc",
-      "security",
-      "http-headers"
     ]
   }
 }
