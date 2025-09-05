@@ -277,6 +277,20 @@ module "repository_learning-langchain" {
 # 🧪 POC repositories
 #-------------------------------------------------------------------------------
 
+module "repository_poc-astro-monorepo" {
+  source = "./templates"
+
+  github_repository = {
+    name         = "poc-astro-monorepo"
+    description  = "🧪 POC to test several Astro projects in a monorepo setup."
+    topics = [
+      "monorepo",
+      "astro",
+      "poc"
+    ]
+  }
+}
+
 module "repository_poc-keycloak" {
   source = "./templates"
 
