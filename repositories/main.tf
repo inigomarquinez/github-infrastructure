@@ -165,6 +165,25 @@ module "repository_slides" {
   }
 }
 
+module "repository_tiny-web-recipes" {
+  source = "./templates"
+
+  github_repository = {
+    name        = "tiny-web-recipes"
+    description = "🧑‍🍳 Quick web recipes for HTML, CSS and JS."
+    topics = [
+      "inigomarquinez",
+      "recipes",
+      "html",
+      "css",
+      "js"
+    ]
+
+    pages_enable = true
+  }
+}
+
+
 #-------------------------------------------------------------------------------
 # 🤼 Challenge repositories
 #-------------------------------------------------------------------------------
