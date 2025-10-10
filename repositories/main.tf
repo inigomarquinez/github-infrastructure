@@ -179,7 +179,11 @@ module "repository_tiny-web-recipes" {
       "js"
     ]
 
-    pages_enable = true
+    pages_enable      = true
+    pages_build_type  = "workflow"
+    pages_cname       = "inigomarquinezprado.dev/tiny-web-recipes"
+    pages_branch      = "main"
+    pages_path        = "/"
   }
 }
 
