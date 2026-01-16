@@ -112,6 +112,22 @@ module "repository_slides" {
   }
 }
 
+module "repository_strapi-plugin-country-isocode-selector" {
+  source = "./templates"
+
+  github_repository = {
+    name        = "strapi-plugin-country-isocode-selector"
+    description = "🗺️ A strapi custom field plugin to select any country based on the ISO 3166-1 country code standard."
+    topics = [
+      "strapi",
+      "plugin",
+      "country",
+      "isocode",
+      "custom-field"
+    ]
+  }
+}
+
 module "repository_tiny-web-recipes" {
   source = "./templates"
 
