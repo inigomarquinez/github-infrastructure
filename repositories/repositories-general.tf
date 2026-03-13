@@ -128,12 +128,12 @@ module "repository_slides" {
   }
 }
 
-module "repository_strapi-plugin-country-isocode-selector" {
+module "repository_strapi-plugin-country-metadata" {
   source = "./templates"
 
   github_repository = {
-    name        = "strapi-plugin-country-isocode-selector"
-    description = "🗺️ A strapi custom field plugin to select any country based on the ISO 3166-1 country code standard."
+    name        = "strapi-plugin-country-metadata"
+    description = "🗺️ Configurable country field for Strapi with ISO codes, phone prefixes, and more."
     topics = [
       "strapi",
       "plugin",
