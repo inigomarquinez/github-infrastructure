@@ -79,6 +79,22 @@ module "repository_github-snitch" {
   }
 }
 
+module "repository_renovate-config" {
+  source = "./templates"
+
+  github_repository = {
+    name        = "renovate-config"
+    description = "📡 Centralized renovate shared presets for my GitHub repositories."
+    topics = [
+      "config",
+      "inigomarquinez",
+      "maintenance",
+      "presets",
+      "renovate"
+    ]
+  }
+}
+
 module "repository_security" {
   source = "./templates"
 
@@ -112,12 +128,12 @@ module "repository_slides" {
   }
 }
 
-module "repository_strapi-plugin-country-metadata" {
+module "repository_strapi-plugin-country-isocode-selector" {
   source = "./templates"
 
   github_repository = {
-    name        = "strapi-plugin-country-metadata"
-    description = "🗺️ Configurable country field for Strapi with ISO codes, phone prefixes, and more."
+    name        = "strapi-plugin-country-isocode-selector"
+    description = "🗺️ A strapi custom field plugin to select any country based on the ISO 3166-1 country code standard."
     topics = [
       "strapi",
       "plugin",
