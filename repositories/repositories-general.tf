@@ -79,6 +79,22 @@ module "repository_github-snitch" {
   }
 }
 
+module "repository_renovate-config" {
+  source = "./templates"
+
+  github_repository = {
+    name        = "renovate-config"
+    description = "📡 Centralized renovate shared presets for my GitHub repositories."
+    topics = [
+      "config",
+      "inigomarquinez",
+      "maintenance",
+      "presets",
+      "renovate"
+    ]
+  }
+}
+
 module "repository_security" {
   source = "./templates"
 
