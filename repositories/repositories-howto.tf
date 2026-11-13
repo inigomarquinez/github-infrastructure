@@ -16,3 +16,18 @@ module "repository_howto-1password-load-secrets-to-env" {
     ]
   }
 }
+
+module "repository_howto-release-please-python" {
+  source = "./templates"
+
+  github_repository = {
+    name               = "howto-release-please-python"
+    description        = "🧪 POC to use Google's release-please github action to create releases in a python service"
+    gitignore_template = "Python"
+    topics = [
+      "poc",
+      "release-please",
+      "python"
+    ]
+  }
+}
